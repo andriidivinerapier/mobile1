@@ -21,6 +21,7 @@ class ProfileActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         val etName = findViewById<EditText>(R.id.etName)
         val btnDone = findViewById<Button>(R.id.btnDone)
         val btnCancel = findViewById<Button>(R.id.btnCancel)

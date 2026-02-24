@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
         val tvThisIs = findViewById<TextView>(R.id.tvThisIs)
         val btnNextActivity = findViewById<Button>(R.id.btnNextActivity)
         val btnProfile = findViewById<Button>(R.id.btnProfile)
+        val btnProducts = findViewById<Button>(R.id.btnProducts)
 
         val getResult = registerForActivityResult(
             ActivityResultContracts.StartActivityForResult()
@@ -42,10 +43,10 @@ class MainActivity : AppCompatActivity() {
             }
         }
         tvThisIs.setOnClickListener {
-            if (tvHelloWorld.currentTextColor == getColor(R.color.red)) {
+            if (tvHelloWorld.currentTextColor == getColor(R.color.black)) {
                 tvHelloWorld.setTextColor(getColor(R.color.white))
             } else {
-                tvHelloWorld.setTextColor(getColor(R.color.red))
+                tvHelloWorld.setTextColor(getColor(R.color.black))
             }
         }
         btnNextActivity.setOnClickListener{
@@ -55,6 +56,11 @@ class MainActivity : AppCompatActivity() {
         }
         btnProfile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
+            getResult.launch(intent)
+        }
+
+        btnProducts.setOnClickListener {
+            val intent = Intent(this, ProductsActivity::class.java)
             getResult.launch(intent)
         }
     }

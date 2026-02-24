@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">ProjectOne</string>
     <string name="change_color">change color</string>
+        <string name="next">Next</string>
+        <string name="previous">Previous</string>
+        <string name="lorem_ipsum">Тут буде ваш текст...</string>
+        <string name="first_fragment_label">Перший екран</string>
+        <string name="second_fragment_label">Другий екран</string>
+
 </resources>
